@@ -12,17 +12,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
-set(TS_FILES calc-table_zh_CN.ts)
+set(TS_FILES src/i18n/calc-table_zh_CN.ts)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        src/views/mainwindow.cpp
+        src/views/mainwindow.h
+        src/views/design/mainwindow.ui
         ${TS_FILES}
-        util/json.h
-        util/json.cpp
-        util/json.h
+        src/util/json.h
+        src/util/json.cpp
+        src/util/json.h
+        src/util/file.cpp
+        src/util/file.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
