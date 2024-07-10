@@ -1,4 +1,4 @@
-#include "src/views/mainwindow.h"
+#include "views/mainwindow.h"
 
 #include <QApplication>
 #include <QLocale>
@@ -13,11 +13,11 @@ int main(int argc, char *argv[])
     for (const QString &locale : uiLanguages) {
         const QString baseName = "calc-table_" + QLocale(locale).name();
         if (translator.load(":/i18n/" + baseName)) {
-            a.installTranslator(&translator);
+            QApplication::installTranslator(&translator);
             break;
         }
     }
     MainWindow w;
     w.show();
-    return a.exec();
+    return QApplication::exec();
 }

@@ -15,7 +15,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 set(TS_FILES src/i18n/calc-table_zh_CN.ts)
 
 set(PROJECT_SOURCES
-        main.cpp
+        src/main.cpp
         src/views/mainwindow.cpp
         src/views/mainwindow.h
         src/views/design/mainwindow.ui
@@ -25,6 +25,8 @@ set(PROJECT_SOURCES
         src/util/json.h
         src/util/file.cpp
         src/util/file.h
+        src/config/config.cpp
+        src/config/config.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
