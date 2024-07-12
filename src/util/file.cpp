@@ -14,6 +14,5 @@ QString readFile(const QString& name) {
         qfs.close();
         return fileData;
     }
-
     return "";
 }
