@@ -27,7 +27,7 @@
        <widget class="QTableWidget" name="genshin_world_material">
         <property name="geometry">
          <rect>
-          <x>351</x>
+          <x>540</x>
           <y>9</y>
           <width>271</width>
           <height>507</height>
@@ -81,7 +81,7 @@
          <rect>
           <x>9</x>
           <y>9</y>
-          <width>330</width>
+          <width>361</width>
           <height>507</height>
          </rect>
         </property>

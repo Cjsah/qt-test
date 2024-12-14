@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "./design/ui_mainwindow.h"
-#include<QDebug>
 #include <QLoggingCategory>
 
 template<typename ...T>
@@ -45,7 +44,7 @@ void initTable(QTableWidget *table, T... args)
 
 void setItem(QTableWidget *table, const int x, const int y, const QString& text)
 {
-    auto *widget = new QTableWidgetItem(text);
+    auto* widget = new QTableWidgetItem(text);
     widget->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     table->setItem(x, y, widget);
 }
